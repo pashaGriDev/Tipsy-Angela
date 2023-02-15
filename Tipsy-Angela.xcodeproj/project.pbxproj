@@ -9,23 +9,37 @@
 /* Begin PBXBuildFile section */
 		10BC087F299C204D00B6798F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BC087E299C204D00B6798F /* AppDelegate.swift */; };
 		10BC0881299C204D00B6798F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BC0880299C204D00B6798F /* SceneDelegate.swift */; };
-		10BC0883299C204D00B6798F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BC0882299C204D00B6798F /* ViewController.swift */; };
 		10BC0886299C204D00B6798F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10BC0884299C204D00B6798F /* Main.storyboard */; };
 		10BC0888299C204E00B6798F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10BC0887299C204E00B6798F /* Assets.xcassets */; };
 		10BC088B299C204E00B6798F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10BC0889299C204E00B6798F /* LaunchScreen.storyboard */; };
 		10BC0893299C207C00B6798F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 10BC0892299C207C00B6798F /* .gitignore */; };
+		10BC0895299C22A600B6798F /* CalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BC0894299C22A600B6798F /* CalculatorController.swift */; };
+		10BC0897299C22B700B6798F /* ResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BC0896299C22B700B6798F /* ResultController.swift */; };
+		10BC089E299C25E900B6798F /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BC089D299C25E900B6798F /* Brain.swift */; };
+		10BC08A0299C262C00B6798F /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BC089F299C262C00B6798F /* CalculatorView.swift */; };
+		10BC08A2299C263D00B6798F /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BC08A1299C263D00B6798F /* ResultView.swift */; };
+		10BC08A7299CE0B500B6798F /* UIView + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BC08A6299CE0B500B6798F /* UIView + ext.swift */; };
+		10BC08A9299CE7D700B6798F /* UIColor + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BC08A8299CE7D700B6798F /* UIColor + ext.swift */; };
+		10BC08AB299CF3DD00B6798F /* ProjectSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BC08AA299CF3DD00B6798F /* ProjectSizes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		10BC087B299C204D00B6798F /* Tipsy-Angela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tipsy-Angela.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10BC087E299C204D00B6798F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10BC0880299C204D00B6798F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		10BC0882299C204D00B6798F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		10BC0885299C204D00B6798F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		10BC0887299C204E00B6798F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10BC088A299C204E00B6798F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10BC088C299C204E00B6798F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10BC0892299C207C00B6798F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		10BC0894299C22A600B6798F /* CalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorController.swift; sourceTree = "<group>"; };
+		10BC0896299C22B700B6798F /* ResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
+		10BC089D299C25E900B6798F /* Brain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
+		10BC089F299C262C00B6798F /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		10BC08A1299C263D00B6798F /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		10BC08A6299CE0B500B6798F /* UIView + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + ext.swift"; sourceTree = "<group>"; };
+		10BC08A8299CE7D700B6798F /* UIColor + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + ext.swift"; sourceTree = "<group>"; };
+		10BC08AA299CF3DD00B6798F /* ProjectSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSizes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,15 +73,62 @@
 		10BC087D299C204D00B6798F /* Tipsy-Angela */ = {
 			isa = PBXGroup;
 			children = (
-				10BC087E299C204D00B6798F /* AppDelegate.swift */,
-				10BC0880299C204D00B6798F /* SceneDelegate.swift */,
-				10BC0882299C204D00B6798F /* ViewController.swift */,
-				10BC0884299C204D00B6798F /* Main.storyboard */,
+				10BC089C299C25B600B6798F /* Application */,
+				10BC089B299C25A700B6798F /* Helper */,
+				10BC089A299C259900B6798F /* Model */,
+				10BC0899299C258E00B6798F /* View */,
+				10BC0898299C256F00B6798F /* Controller */,
 				10BC0887299C204E00B6798F /* Assets.xcassets */,
 				10BC0889299C204E00B6798F /* LaunchScreen.storyboard */,
 				10BC088C299C204E00B6798F /* Info.plist */,
 			);
 			path = "Tipsy-Angela";
+			sourceTree = "<group>";
+		};
+		10BC0898299C256F00B6798F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				10BC0894299C22A600B6798F /* CalculatorController.swift */,
+				10BC0896299C22B700B6798F /* ResultController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		10BC0899299C258E00B6798F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				10BC089F299C262C00B6798F /* CalculatorView.swift */,
+				10BC08A1299C263D00B6798F /* ResultView.swift */,
+				10BC0884299C204D00B6798F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		10BC089A299C259900B6798F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				10BC089D299C25E900B6798F /* Brain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		10BC089B299C25A700B6798F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				10BC08A6299CE0B500B6798F /* UIView + ext.swift */,
+				10BC08A8299CE7D700B6798F /* UIColor + ext.swift */,
+				10BC08AA299CF3DD00B6798F /* ProjectSizes.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		10BC089C299C25B600B6798F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				10BC087E299C204D00B6798F /* AppDelegate.swift */,
+				10BC0880299C204D00B6798F /* SceneDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,8 +203,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10BC0883299C204D00B6798F /* ViewController.swift in Sources */,
 				10BC087F299C204D00B6798F /* AppDelegate.swift in Sources */,
+				10BC08A7299CE0B500B6798F /* UIView + ext.swift in Sources */,
+				10BC0897299C22B700B6798F /* ResultController.swift in Sources */,
+				10BC08A9299CE7D700B6798F /* UIColor + ext.swift in Sources */,
+				10BC0895299C22A600B6798F /* CalculatorController.swift in Sources */,
+				10BC089E299C25E900B6798F /* Brain.swift in Sources */,
+				10BC08AB299CF3DD00B6798F /* ProjectSizes.swift in Sources */,
+				10BC08A0299C262C00B6798F /* CalculatorView.swift in Sources */,
+				10BC08A2299C263D00B6798F /* ResultView.swift in Sources */,
 				10BC0881299C204D00B6798F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,7 +364,7 @@
 				INFOPLIST_FILE = "Tipsy-Angela/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -328,7 +396,7 @@
 				INFOPLIST_FILE = "Tipsy-Angela/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
