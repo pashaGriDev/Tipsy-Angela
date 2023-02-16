@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		103C7A5C299EA95700D18882 /* ProjectSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103C7A5B299EA95700D18882 /* ProjectSizes.swift */; };
+		103C7A5E299EBF8F00D18882 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103C7A5D299EBF8F00D18882 /* Bill.swift */; };
 		10BC087F299C204D00B6798F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BC087E299C204D00B6798F /* AppDelegate.swift */; };
 		10BC0881299C204D00B6798F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BC0880299C204D00B6798F /* SceneDelegate.swift */; };
 		10BC0888299C204E00B6798F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10BC0887299C204E00B6798F /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		103C7A5B299EA95700D18882 /* ProjectSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSizes.swift; sourceTree = "<group>"; };
+		103C7A5D299EBF8F00D18882 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		10BC087B299C204D00B6798F /* Tipsy-Angela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tipsy-Angela.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10BC087E299C204D00B6798F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10BC0880299C204D00B6798F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				10BC089D299C25E900B6798F /* Brain.swift */,
+				103C7A5D299EBF8F00D18882 /* Bill.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10BC087F299C204D00B6798F /* AppDelegate.swift in Sources */,
+				103C7A5E299EBF8F00D18882 /* Bill.swift in Sources */,
 				10BC08A7299CE0B500B6798F /* UIView + ext.swift in Sources */,
 				10BC0897299C22B700B6798F /* ResultController.swift in Sources */,
 				10BC08A9299CE7D700B6798F /* UIColor + ext.swift in Sources */,

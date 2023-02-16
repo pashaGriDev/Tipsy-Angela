@@ -143,9 +143,9 @@ private extension CalculatorView {
         billTextField.placeholder = "e.g 123.56"
         billTextField.textColor = .darkGray
         billTextField.font = UIFont.systemFont(ofSize: Size.FontSize.textField)
-        billTextField.keyboardType = .numberPad
+        billTextField.keyboardType = .decimalPad
         billTextField.textAlignment = .center
-        billTextField.clearButtonMode = .always
+//        billTextField.clearButtonMode = .always
         
         topStackView.addArrangedSubview(billTextField)
     }
@@ -217,7 +217,7 @@ private extension CalculatorView {
     func setupSplitNumberLabel() {
         splitNumberLabel.text = "2"
         splitNumberLabel.textColor = .customGreen1
-        splitNumberLabel.font = UIFont.systemFont(ofSize: Size.FontSize.title)
+        splitNumberLabel.font = UIFont.systemFont(ofSize: Size.FontSize.button)
         splitNumberLabel.textAlignment = .center
         
         stepperStackView.addArrangedSubview(splitNumberLabel)

@@ -43,29 +43,66 @@ private extension CalculatorController {
 
 @objc extension CalculatorController {
     func buttonDidPress(_ sender: UIButton) {
-        print("didPress - \(sender.currentTitle!)")
-    }
-    
-    func calculateButtonDidPress() {
-        print("calculateButtonDidPress")
         
-        let resultVC = ResultController()
-//        resultVC.modalPresentationStyle = .fullScreen
-        show(resultVC, sender: nil)
+        calculatorView.billTextField.endEditing(true)
+        
+        print("show : \(brain.checkUserSelection(sender.currentTitle))")
+        
+        calculatorView.ptcButtons.forEach { button in
+            if sender == button {
+                button.isSelected = true
+                button.setTitleColor(.white, for: .normal)
+            } else {
+                button.isSelected = false
+                button.setTitleColor(.customGreen1, for: .normal)
+            }
+        }
     }
     
     func stepperDidChange(_ sender: UIStepper) {
         calculatorView.splitNumberLabel.text = String(format: "%.0f", sender.value)
+    }
+    
+    func calculateButtonDidPress() {
+        
+        if brain.bill.totat <= 0 {
+            print("Wrong!!!")
+        } else {
+            // number of persons
+            brain.bill.person = Int(calculatorView.stepper.value)
+            
+            // user select tips
+            calculatorView.ptcButtons.forEach { button in
+                if button.isSelected {
+                    brain.checkUserSelection(button.currentTitle)
+                }
+            }
+            
+            let resultVC = ResultController()
+            resultVC.brain = self.brain
+            resultVC.modalPresentationStyle = .fullScreen
+            show(resultVC, sender: nil)
+        }
     }
 }
 
 extension CalculatorController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        print("TF : \(string)")
-        
         return brain.isValidCharacter(string)
     }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        if let bill = textField.text, brain.isValidBill(bill) {
+            brain.giveTotal(bill: bill)
+        } else {
+            print("Wrong!!!")
+        }
+    }
+    
+    // очищает textField когда начинается редоктирование
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = ""
+    }
 }

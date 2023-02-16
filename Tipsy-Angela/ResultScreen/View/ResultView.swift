@@ -33,12 +33,14 @@ class ResultView: UIView {
         setConstraints()
     }
     
-    func configureLabel(between people: Int, tip: String) {
-        splitBetweenLabel.text = "Split between \(people) people, with \(tip) tip."
+    func configureLabel(between people: Int, tips: Double) {
+        
+        let stringTips = String(tips * 100) + "%"
+        splitBetweenLabel.text = "Split between \(people) people, with \(stringTips) tip."
     }
     
     func configureTotalLabel(_ total: Double) {
-        totalLabel.text = String(total)
+        totalLabel.text = String(format: "%.3f", total)
     }
     
     required init?(coder: NSCoder) {
