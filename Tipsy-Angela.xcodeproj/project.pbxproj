@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		103C7A5C299EA95700D18882 /* ProjectSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103C7A5B299EA95700D18882 /* ProjectSizes.swift */; };
 		10BC087F299C204D00B6798F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BC087E299C204D00B6798F /* AppDelegate.swift */; };
 		10BC0881299C204D00B6798F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BC0880299C204D00B6798F /* SceneDelegate.swift */; };
 		10BC0888299C204E00B6798F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10BC0887299C204E00B6798F /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		103C7A5B299EA95700D18882 /* ProjectSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSizes.swift; sourceTree = "<group>"; };
 		10BC087B299C204D00B6798F /* Tipsy-Angela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tipsy-Angela.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10BC087E299C204D00B6798F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10BC0880299C204D00B6798F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			children = (
 				10BC08A6299CE0B500B6798F /* UIView + ext.swift */,
 				10BC08A8299CE7D700B6798F /* UIColor + ext.swift */,
+				103C7A5B299EA95700D18882 /* ProjectSizes.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				10BC08A9299CE7D700B6798F /* UIColor + ext.swift in Sources */,
 				10BC0895299C22A600B6798F /* CalculatorController.swift in Sources */,
 				10BC089E299C25E900B6798F /* Brain.swift in Sources */,
+				103C7A5C299EA95700D18882 /* ProjectSizes.swift in Sources */,
 				10BC08A0299C262C00B6798F /* CalculatorView.swift in Sources */,
 				10BC08A2299C263D00B6798F /* ResultView.swift in Sources */,
 				10BC0881299C204D00B6798F /* SceneDelegate.swift in Sources */,

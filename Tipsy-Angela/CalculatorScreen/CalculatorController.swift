@@ -9,7 +9,8 @@ import UIKit
 
 class CalculatorController: UIViewController {
 
-    let calculatorView = CalculatorView()
+    private let calculatorView = CalculatorView()
+    private var brain = Brain()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,13 +48,24 @@ private extension CalculatorController {
     
     func calculateButtonDidPress() {
         print("calculateButtonDidPress")
+        
+        let resultVC = ResultController()
+//        resultVC.modalPresentationStyle = .fullScreen
+        show(resultVC, sender: nil)
     }
     
     func stepperDidChange(_ sender: UIStepper) {
-        print("stepperDidChange \(sender.value)")
+        calculatorView.splitNumberLabel.text = String(format: "%.0f", sender.value)
     }
 }
 
 extension CalculatorController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        print("TF : \(string)")
+        
+        return brain.isValidCharacter(string)
+    }
     
 }

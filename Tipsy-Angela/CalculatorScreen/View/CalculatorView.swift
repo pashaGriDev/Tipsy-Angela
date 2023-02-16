@@ -18,7 +18,7 @@ class CalculatorView: UIView {
     }()
     
     private let topStackView = UIStackView()
-    private let totalLabel = UILabel()
+    private let titleTotalLabel = UILabel()
     let billTextField = UITextField()
     
     private let stackView = UIStackView()
@@ -28,7 +28,7 @@ class CalculatorView: UIView {
     private let buttonsStackView = UIStackView()
     var ptcButtons: [UIButton] = []
     
-    private let splitLabel = UILabel()
+    private let titleSplitLabel = UILabel()
     
     private let stepperStackView = UIStackView()
     let splitNumberLabel = UILabel()
@@ -41,7 +41,7 @@ class CalculatorView: UIView {
         super.init(frame: frame)
         
         setupTopStackView()
-        setupTotalLabel()
+        setupTitleTotalLabel()
         setupBillTextField()
         
         // elements from the greenView
@@ -51,7 +51,7 @@ class CalculatorView: UIView {
         setupTipLabel()
         setupButtonsStackView()
         setupPtcButtons()
-        setupSplitLabel()
+        setupTitleSplitLabel()
         setupStepperStackView()
         setupSplitNumberLabel()
         setupStepper()
@@ -64,53 +64,53 @@ class CalculatorView: UIView {
     private func setConstraints() {
         
         NSLayoutConstraint.activate([
-            topStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
+            topStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: Size.StackView.offset / 2),
             topStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             topStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
             
             // linked to superview, stackView alignment = center
-            totalLabel.heightAnchor.constraint(equalToConstant: 30),
-            totalLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
-            trailingAnchor.constraint(equalTo: totalLabel.trailingAnchor, constant: 30),
+            titleTotalLabel.heightAnchor.constraint(equalToConstant: Size.Label.height),
+            titleTotalLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Size.Label.offset),
+            trailingAnchor.constraint(equalTo: titleTotalLabel.trailingAnchor, constant: Size.Label.offset),
             
             // linked to superview, stackView alignment = center
-            billTextField.heightAnchor.constraint(equalToConstant: 48),
-            billTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            trailingAnchor.constraint(equalTo: billTextField.trailingAnchor, constant: 10),
+            billTextField.heightAnchor.constraint(equalToConstant: Size.TextField.height),
+            billTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Size.TextField.offset),
+            trailingAnchor.constraint(equalTo: billTextField.trailingAnchor, constant: Size.TextField.offset),
             
-            greenView.topAnchor.constraint(equalTo: billTextField.bottomAnchor, constant: 20),
+            greenView.topAnchor.constraint(equalTo: billTextField.bottomAnchor, constant: Size.mainSpacing),
             greenView.leadingAnchor.constraint(equalTo: leadingAnchor),
             greenView.trailingAnchor.constraint(equalTo: trailingAnchor),
             greenView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            stackView.topAnchor.constraint(equalTo: greenView.topAnchor, constant: 20),
-            stackView.leadingAnchor.constraint(equalTo: greenView.leadingAnchor, constant: 20),
-            greenView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: 20),
+            stackView.topAnchor.constraint(equalTo: greenView.topAnchor, constant: Size.mainSpacing),
+            stackView.leadingAnchor.constraint(equalTo: greenView.leadingAnchor, constant: Size.StackView.offset),
+            greenView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: Size.StackView.offset),
             
             // linked to superview, stackView alignment = center
-            tipLabel.heightAnchor.constraint(equalToConstant: 30),
-            tipLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
-            trailingAnchor.constraint(equalTo: tipLabel.trailingAnchor, constant: 30),
+            tipLabel.heightAnchor.constraint(equalToConstant: Size.Label.height),
+            tipLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Size.Label.offset),
+            trailingAnchor.constraint(equalTo: tipLabel.trailingAnchor, constant: Size.Label.offset),
             
             // linked to superview, stackView (the stackView) alignment = center
             buttonsStackView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
             buttonsStackView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
             
             // b1 width is equal to 30% of buttonsStackView width
-            ptcButtons[0].heightAnchor.constraint(equalToConstant: 54),
+            ptcButtons[0].heightAnchor.constraint(equalToConstant: Size.Button.height),
             ptcButtons[0].widthAnchor.constraint(equalTo: buttonsStackView.widthAnchor, multiplier: 0.3),
-            ptcButtons[0].heightAnchor.constraint(equalToConstant: 54),
-            ptcButtons[2].heightAnchor.constraint(equalToConstant: 54),
+            ptcButtons[0].heightAnchor.constraint(equalToConstant: Size.Button.height),
+            ptcButtons[2].heightAnchor.constraint(equalToConstant: Size.Button.height),
             ptcButtons[2].widthAnchor.constraint(equalTo: ptcButtons[0].widthAnchor),
             
             // linked to superview, stackView alignment = center
-            splitLabel.heightAnchor.constraint(equalToConstant: 30),
-            splitLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
-            trailingAnchor.constraint(equalTo: splitLabel.trailingAnchor, constant: 30),
+            titleSplitLabel.heightAnchor.constraint(equalToConstant: Size.Label.height),
+            titleSplitLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Size.Label.offset),
+            trailingAnchor.constraint(equalTo: titleSplitLabel.trailingAnchor, constant: Size.Label.offset),
             
             calculateButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            calculateButton.heightAnchor.constraint(equalToConstant: 58),
-            calculateButton.widthAnchor.constraint(greaterThanOrEqualToConstant: 200),
+            calculateButton.heightAnchor.constraint(equalToConstant: Size.Button.heightNav),
+            calculateButton.widthAnchor.constraint(greaterThanOrEqualToConstant: Size.Button.widthNavMin),
             calculateButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)])
     }
 
@@ -126,23 +126,23 @@ private extension CalculatorView {
         topStackView.axis = .vertical
         topStackView.distribution = .fill
         topStackView.alignment = .center
-        topStackView.spacing = 20
+        topStackView.spacing = Size.mainSpacing
         
         setupView(topStackView)
     }
     
-    func setupTotalLabel() {
-        totalLabel.text = "Enter bill total"
-        totalLabel.textColor = .lightGray
-        totalLabel.font = UIFont.systemFont(ofSize: 20)
+    func setupTitleTotalLabel() {
+        titleTotalLabel.text = "Enter bill total"
+        titleTotalLabel.textColor = .lightGray
+        titleTotalLabel.font = UIFont.systemFont(ofSize: Size.FontSize.title)
         
-        topStackView.addArrangedSubview(totalLabel)
+        topStackView.addArrangedSubview(titleTotalLabel)
     }
     
     func setupBillTextField() {
         billTextField.placeholder = "e.g 123.56"
         billTextField.textColor = .darkGray
-        billTextField.font = UIFont.systemFont(ofSize: 40)
+        billTextField.font = UIFont.systemFont(ofSize: Size.FontSize.textField)
         billTextField.keyboardType = .numberPad
         billTextField.textAlignment = .center
         billTextField.clearButtonMode = .always
@@ -151,7 +151,7 @@ private extension CalculatorView {
     }
     
     func setupStackView() {
-        stackView.spacing = 20
+        stackView.spacing = Size.mainSpacing
         stackView.axis = .vertical
         stackView.distribution = .fill
         stackView.alignment = .center
@@ -163,7 +163,7 @@ private extension CalculatorView {
     func setupTipLabel() {
         tipLabel.text = "Select tip"
         tipLabel.textColor = .lightGray
-        tipLabel.font = UIFont.systemFont(ofSize: 20)
+        tipLabel.font = UIFont.systemFont(ofSize: Size.FontSize.title)
         
         stackView.addArrangedSubview(tipLabel)
     }
@@ -179,7 +179,7 @@ private extension CalculatorView {
         [0, 10, 20].forEach { percent in
             let button = UIButton(type: .system)
             button.setTitle("\(percent)%", for: .normal)
-            button.titleLabel?.font = UIFont.systemFont(ofSize: 35)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: Size.FontSize.button)
             button.contentMode = .scaleAspectFit
             
             
@@ -198,18 +198,18 @@ private extension CalculatorView {
         }
     }
     
-    func setupSplitLabel() {
-        splitLabel.text = "Choose Split"
-        splitLabel.textColor = .lightGray
-        splitLabel.font = UIFont.systemFont(ofSize: 20)
+    func setupTitleSplitLabel() {
+        titleSplitLabel.text = "Choose Split"
+        titleSplitLabel.textColor = .lightGray
+        titleSplitLabel.font = UIFont.systemFont(ofSize: Size.FontSize.title)
         
-        stackView.addArrangedSubview(splitLabel)
+        stackView.addArrangedSubview(titleSplitLabel)
     }
     
     func setupStepperStackView() {
         stepperStackView.distribution = .fillEqually
         stepperStackView.alignment = .fill
-        stepperStackView.spacing = 20 / 2
+        stepperStackView.spacing = Size.mainSpacing / 2
         
         stackView.addArrangedSubview(stepperStackView)
     }
@@ -217,7 +217,7 @@ private extension CalculatorView {
     func setupSplitNumberLabel() {
         splitNumberLabel.text = "2"
         splitNumberLabel.textColor = .customGreen1
-        splitNumberLabel.font = UIFont.systemFont(ofSize: 30)
+        splitNumberLabel.font = UIFont.systemFont(ofSize: Size.FontSize.title)
         splitNumberLabel.textAlignment = .center
         
         stepperStackView.addArrangedSubview(splitNumberLabel)
@@ -234,7 +234,7 @@ private extension CalculatorView {
     func setupCalculateButton() {
         calculateButton.setTitle("Calculate", for: .normal)
         calculateButton.setTitleColor(.white, for: .normal)
-        calculateButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
+        calculateButton.titleLabel?.font = UIFont.systemFont(ofSize: Size.FontSize.buttonNav)
         calculateButton.backgroundColor = .customGreen1
         
         setupView(calculateButton)
